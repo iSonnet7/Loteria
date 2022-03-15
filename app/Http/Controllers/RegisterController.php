@@ -12,13 +12,15 @@ class RegisterController extends Controller
     }
 
     public function store(Request $request){
+
+
         $request -> validate([
             'name'=>'required|string|max:50',
             'fatherLastName'=>'required|string|max:30',
             'motherLastName'=>'required|string|max:30',
             'birthday'=>'required',
             'number'=>'required|numeric',
-            'email'=>'required|max:100',
+            'email'=>'required|max:100|unique:users',
             'password'=>'required|max:255',
         ]);
 

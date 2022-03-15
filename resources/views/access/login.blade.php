@@ -26,6 +26,5 @@
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <a href="{{route('google.redirect')}}" class="btn btn-secundary">GOOGLE</a>
     </div>
 @endsection
