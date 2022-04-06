@@ -38,6 +38,6 @@ class RegisterController extends Controller
     }
 
     public function social(){
-        return view('access.register');
+        return view('access.social');
     }
 }

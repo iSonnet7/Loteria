@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('birthday');
             $table->string('number', 30);
             $table->string('email', 100);
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps(); 
         });

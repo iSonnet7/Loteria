@@ -8,7 +8,7 @@
         @csrf
         <div class="mb-1">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name">
+            <input type="text" class="form-control" name="name" placeholder="{{echo $name}}">
         </div>
         <div class="mb-1">
             <label for="fatherLastName" class="form-label">Father Last Name</label>
@@ -29,10 +29,6 @@
         <div class="mb-1">
             <label for="email" class="form-label">Email address</label>
             <input type="email" class="form-control" name="email">
-        </div>
-        <div class="mb-1">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
