@@ -36,8 +36,4 @@ class RegisterController extends Controller
 
         return redirect()->route('login.index');
     }
-
-    public function social(){
-        return view('access.social');
-    }
 }

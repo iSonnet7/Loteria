@@ -32,5 +32,3 @@ Route::get('google-callback', [SocialiteController::class, 'callback'])->name('g
 Route::get('Register', [RegisterController::class, 'create'])->name('register.index');
 
 Route::post('Register', [RegisterController::class, 'store'])->name('register.store');
-
-Route::get('Register-Social', [RegisterController::class, 'social'])->name('register.social');

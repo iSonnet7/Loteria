@@ -33,7 +33,7 @@ class SocialiteController extends Controller
 
             //Auth::login($new);
 
-            return redirect()->route('register.social')->with('name', $name);
+            return redirect()->route('home');
         }
     }
 }
