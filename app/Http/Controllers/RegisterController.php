@@ -12,8 +12,6 @@ class RegisterController extends Controller
     }
 
     public function store(Request $request){
-
-
         $request -> validate([
             'name'=>'required|string|max:50',
             'fatherLastName'=>'required|string|max:30',
@@ -37,5 +35,9 @@ class RegisterController extends Controller
         $user->save();
 
         return redirect()->route('login.index');
+    }
+
+    public function social(){
+        return view('access.register');
     }
 }

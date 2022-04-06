@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Register')
+@section('title', 'Register Social')
 
 @section('content')
 <div class="container w-25 border p-4 mt-4">

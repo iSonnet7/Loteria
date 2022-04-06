@@ -24,14 +24,16 @@ class SocialiteController extends Controller
         } else {
             $new = new User();
 
-            $new->name = $user->name;
-            $new->email = $user->email;
+            $name = $user->name;
 
-            $new->save();
+            //$new->name = $user->name;
+            //$new->email = $user->email;
 
-            Auth::login($new);
+            //$new->save();
 
-            return redirect()->route('home');
+            //Auth::login($new);
+
+            return redirect()->route('register.social')->with('name', $name);
         }
     }
 }
