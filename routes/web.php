@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RegisterSocialController;
 use App\Http\Controllers\SocialiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,7 @@ Route::get('google-callback', [SocialiteController::class, 'callback'])->name('g
 Route::get('Register', [RegisterController::class, 'create'])->name('register.index');
 
 Route::post('Register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::get('Register-social', [RegisterSocialController::class, 'create'])->name('registersocial.index');
+
+Route::post('Register-social', [RegisterSocialController::class, 'store'])->name('registersocial.store');
