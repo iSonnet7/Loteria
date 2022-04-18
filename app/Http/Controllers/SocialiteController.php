@@ -33,8 +33,7 @@ class SocialiteController extends Controller
 
             //Auth::login($new);
 
-            return redirect()->route('home');
-            
+            return redirect()->route('home', compact('name'));
         }
     }
 }
