@@ -24,12 +24,10 @@ class SocialiteController extends Controller
         } else {
             $new = new User();
 
-            $name = $user->name;
+            $new->name = $user->name;
+            $new->email = $user->email;
 
-            //$new->name = $user->name;
-            //$new->email = $user->email;
-
-            return view('access.register', compact('name'));
+            return view('access.register', compact('new'));
         }
     }
 }
