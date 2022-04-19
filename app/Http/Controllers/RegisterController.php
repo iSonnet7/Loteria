@@ -19,7 +19,7 @@ class RegisterController extends Controller
             'birthday'=>'required',
             'number'=>'required|numeric',
             'email'=>'required|max:100|unique:users',
-            'password'=>'required|max:255',
+            'password'=>'nullable|max:255',
         ]);
 
         $user = new User();

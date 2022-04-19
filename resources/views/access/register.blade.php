@@ -6,10 +6,18 @@
 <div class="container w-25 border p-4 mt-4">
     <form action="{{route('register.store')}}" method="POST">
         @csrf
-        <div class="mb-1">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name">
-        </div>
+        @if (isset($name))
+            <div class="mb-1">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" value="{{ $name }}">
+            </div>
+        @else
+            <div class="mb-1">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" value="Hola">
+            </div>
+        @endif
+        
         <div class="mb-1">
             <label for="fatherLastName" class="form-label">Father Last Name</label>
             <input type="text" class="form-control" name="fatherLastName">

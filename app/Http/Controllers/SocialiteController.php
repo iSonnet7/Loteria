@@ -29,11 +29,7 @@ class SocialiteController extends Controller
             //$new->name = $user->name;
             //$new->email = $user->email;
 
-            //$new->save();
-
-            //Auth::login($new);
-
-            return redirect()->route('home', compact('name'));
+            return view('access.register', compact('name'));
         }
     }
 }
