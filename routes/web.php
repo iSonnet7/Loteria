@@ -26,9 +26,13 @@ Route::post('Login', [LoginController::class, 'store'])->name('login.store');
 
 Route::get('Logout', [LoginController::class, 'destroy'])->name('login.destroy');
 
-Route::get('google-redirect', [SocialiteController::class, 'redirect'])->name('google.redirect');
+Route::get('google-redirect', [SocialiteController::class, 'redirectGoogle'])->name('google.redirect');
 
-Route::get('google-callback', [SocialiteController::class, 'callback'])->name('google.callback');
+Route::get('google-callback', [SocialiteController::class, 'callbackGoogle'])->name('google.callback');
+
+Route::get('facebook-redirect', [SocialiteController::class, 'redirectFacebook'])->name('facebook.redirect');
+
+Route::get('facebook-callback', [SocialiteController::class, 'callbackFacebook'])->name('facebook.callback');
 
 Route::get('Register', [RegisterController::class, 'create'])->name('register.index');
 

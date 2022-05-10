@@ -33,7 +33,13 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_OAUTH_ID'),
         'client_secret' => env('GOOGLE_OAUTH_KEY'),
-        'redirect' => '/google-callback',
+        'redirect' => env('GOOGLE_OAUTH_URI'),
     ],
+
+    'facebook' => [    
+        'client_id' => env('FACEBOOK_OAUTH_ID'),  
+        'client_secret' => env('FACEBOOK_OAUTH_KEY'),  
+        'redirect' => env('FACEBOOK_OAUTH_URI') 
+      ],
 
 ];
